@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    name: deploy-two
+    labels:
+        name: deploytwo
+spec:
+    replicas: 3
+    selectors:
+        matchlabels:
+            name: jtone
+    template:
+        metadata:
+            labels:
+                name: jtone
+        sepc:
+            containers:
+                -name: ghogalekunal/javat-app:latest
+
