@@ -6,14 +6,15 @@ metadata:
         name: deploytwo
 spec:
     replicas: 3
-    selectors:
-        matchlabels:
+    selector:
+        matchLabels:
             name: jtone
     template:
         metadata:
             labels:
                 name: jtone
-        sepc:
+        spec:
             containers:
-                -name: ghogalekunal/javat-app:latest
+                - name: javat-con 
+                  image: ghogalekunal/javatappimg:latest
 
